@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- sql mapper -->
+<mapper namespace="freeboard"> <!-- namespace : 일종의 식별역할의 변수 -->
+	<select id=""></select>
+<!--select * from freeboard order by idx desc limit 0,15;-->
+
+</mapper>
+<!-- ${} : 표현식 . 중괄호안에 수식에 대한 연산 결과값을 구해서 출력
+	 #{} : 무조건 문자열(' ')로 중괄호 안의 값을 처리한다. -->
+
+
+
