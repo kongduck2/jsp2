@@ -10,14 +10,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Freeboard {
+public class Comment {
 	private int idx;
+	private int mref;
 	private String name;
 	private String password;
-	private String subject;
 	private String content;
-	private int readCount;
-	private Timestamp wdate; //Date 타입은 날짜만 가져오고 시간은 못가져옴.
+	private Timestamp wdate;
 	private String ip;
-	private short commentCount;
 }

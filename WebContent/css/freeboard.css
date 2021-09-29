@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+*{
+    font-family: 'Jua', sans-serif;
+}
+ul {
+	list-style: none;
+	padding-inline-start:0px;
+}
+#main{
+	display:flex;
+	flex-direction:column;
+	list-style: none;
+
+}
+.row , .row-2{
+		display: flex;
+}
+.row > li{
+	padding: 3px 0px;
+	align-self: center;
+	padding : 5px;
+	margin: 2px;
+	text-align: center;
+}
+.row > li:nth-child(1){
+	flex-basis:20%;
+	background-color: #0091ea;
+	color:white;
+	border-radius: 3px;
+	font-size: 0.8em;
+}	
+.row > li:nth-child(2){
+	flex-basis:35%;
+	color:#1A237E;
+}
+.row > li:nth-child(3){
+	flex-basis:20%;
+	background-color: #0091ea;
+	color:white;
+	border-radius: 3px;
+	font-size: 0.8em;
+}
+.row > li:nth-child(4){
+	flex-basis:25%;
+	color:#1A237E;
+}
+#content{
+	min-height: 40%;
+	
+}
+#content li:first-child {
+	padding: 3px;
+	border-radius: 3px;
+	border: 1px solid #1A237E;
+	text-align: center;
+	font-size: 0.7em;
+	margin: 7px 0px;
+}
+#content li:nth-child(2) {
+	padding: 5px;
+}
+
+.row-2 li{
+	padding : 1px 7px;
+}
+.button {
+    background-color: #64c1ff;
+    color:white;
+    padding: 7px 25px;
+    text-decoration: none;  /*  밑줄제거  */
+    cursor: pointer;
+    display: inline-block;
+	text-align:center;
+	border-radius: 4px;
+	border:none;
+	margin : 3px;
+}
+span {
+	padding : 1px 5px;
+	color: #0064b7;
+}
+.small {
+	font-size: 0.8rem;
+	 padding: 6px 10px;
+	 background-color: #0064b7;
+}
+.input{
+	padding: 7px 15px;
+	border: 1px solid #4080bf;
+	border-radius: 3px;
+}
+.line {
+	border-top: 1px solid #1A237E;
+}
+
+.comment{
+	min-height: 70px;
+	margin-bottom: 8px;
+	padding : 8px 4px;
+}
+.name {
+	width:30%;
+	display: inline-block;
+	color:  #4080bf;
+}
+
+.now {
+	color : gray;
+	width:40%;
+	display: inline-block;
+}
+@media screen and (max-width:768px) {
+   .row {
+        flex-direction: column;
+    }
+}
+
+#title{
+	background-color: white;
+	color: black;
+	font-size: 18px;
+}
+/* insert,update*/
+
+textarea{
+	padding: 7px;
+	border-radius: 5px;
+	border : 2px solid #ccc;
+	box-sizing: border-box;
+}
+
+
+input[type=submit],input[type=reset],input[type=button]{
+    color: ghostwhite;
+    font-size: 15px;
+    background-color: #90caf9;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+   	border-radius: 5px;
+}
+input[type=submit].smallB,input[type=reset].smallB{
+	font-size: 15px;
+	 padding: 6px 10px;
+	 background-color: #0064b7;
+}
+
+pre{
+	font-size : 1.2em;
+}
+
+/* 게시글 삭제시 패스워드 입력 */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    border: 3px solid#4080bf;
+    width: 30%; /* Could be more or less, depending on screen size */
+    font-size: 1.1em;
+    border-radius: 4px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
