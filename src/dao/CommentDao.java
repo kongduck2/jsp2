@@ -35,9 +35,22 @@ public class CommentDao {
 		mapper.close();
 	}
 	
+	public void updateCountAll(int idx) {
+		SqlSession mapper = sqlFactory.openSession();
+		mapper.update("updateCountAll", idx);
+		mapper.commit();
+		mapper.close();
+	}
+	
 	public void updateCommentCnt(int idx) {
 		SqlSession mapper = sqlFactory.openSession();
 		mapper.update("updateCommentCnt", idx);
+		mapper.commit();
+		mapper.close();
+	}
+	public void deleteComment(int idx) {
+		SqlSession mapper = sqlFactory.openSession();
+		mapper.delete("deleteComment",idx);
 		mapper.commit();
 		mapper.close();
 	}
