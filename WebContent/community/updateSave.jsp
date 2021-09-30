@@ -5,6 +5,7 @@
 <%
 	//수정 버튼 -> 내용 변경 -> 저장버튼으로 실행됨.
 	request.setCharacterEncoding("UTF-8");	
+	int pageNo = Integer.parseInt(request.getParameter("page"));
 	int idx = Integer.parseInt(request.getParameter("idx"));
 	String subject = request.getParameter("subject");
 	//String name = request.getParameter("name");
@@ -21,5 +22,5 @@
 	
 	FreeboardDao dao = FreeboardDao.getInstance();
 	dao.update(dto);
-	response.sendRedirect("detailAction.jsp?idx="+idx+"&page=1");
+	response.sendRedirect("detailAction.jsp?idx="+idx+"&page="+pageNo);
 %>

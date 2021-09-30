@@ -6,6 +6,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	request.setCharacterEncoding("UTF-8");
 	int idx = Integer.parseInt(request.getParameter("idx"));
 	int pageNo = Integer.parseInt(request.getParameter("page"));
 	
@@ -15,6 +16,8 @@
 	CommentDao cdao = CommentDao.getInstance();
 	List<Comment> cmts = cdao.getComments(idx); 
 	request.setAttribute("cmtlist", cmts);
+	
+	request.setAttribute("page", pageNo);
 	
 	//bean 객체로 참조하고 있는값은 detailView.jsp 에게 전달하고 브라우저에 출력
 	request.setAttribute("bean", bean);

@@ -50,7 +50,7 @@ public class CommentDao {
 	}
 	public void deleteComment(int idx) {
 		SqlSession mapper = sqlFactory.openSession();
-		mapper.delete("deleteComment",idx);
+		mapper.delete("comment.deleteComment",idx);
 		mapper.commit();
 		mapper.close();
 	}

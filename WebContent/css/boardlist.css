@@ -36,5 +36,24 @@ li.top{
 	color : #6d98fc;
 	font-size: 20px;
 }
+.pagenum {
+    border: 1px solid gray;
+    color: #0178b6;
+    padding: 3px 5px;
+    text-decoration: none;  /*  밑줄제거  */
+    cursor: pointer;
+    display: inline-block;
+   text-align:center;
+   font-size: 9pt;
+   border-radius: 3px;
+}
+.pagenum:hover{
+     background-color:gray;
+     color:white;
+} 
 
+.current{
+	background-color: gray;
+	color:orange;
+}
 

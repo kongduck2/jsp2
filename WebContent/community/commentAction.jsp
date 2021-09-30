@@ -3,15 +3,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	request.setCharacterEncoding("UTF-8");
 	CommentDao dao = CommentDao.getInstance();
 	int mref;
+	int pageNo = Integer.parseInt(request.getParameter("page"));
 	if(request.getParameter("del") != null){ //삭제
 		int cmtidx = Integer.parseInt(request.getParameter("cmtidx"));
 		int idx = Integer.parseInt(request.getParameter("idx"));
 		dao.deleteComment(cmtidx);
 		mref=idx;
 	}else{ //댓글 추가
-	request.setCharacterEncoding("UTF-8");
 	mref = Integer.parseInt(request.getParameter("mref"));
 	String name = request.getParameter("name");
 	String password = request.getParameter("password");
@@ -24,7 +25,7 @@
 	}
 	
 	dao.updateCountAll(mref);
-	response.sendRedirect("detailAction.jsp?page=1&idx="+mref);
+	response.sendRedirect("detailAction.jsp?page="+pageNo+"&idx="+mref);
 	
 	
 	
